@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="java.js" defer></script>
+    <script src="java.js"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="top-menu">
-            <div class="logo">Min sida</div>
-            <ul class="menu">
-                <li><a href="#">Hem</a></li>
-                <li><a href="#">Om</a></li>
-                <li><a href="#">Kontakt</a></li>
+    <header class="header">
+        <div class="logo">
+            <img class="logo" src="F1bild.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="open-panel" aria-controls="side-panel" aria-expanded="false">Öppna meny</button>
         </nav>
+
     </header>
 
-    <main>
-        <section class="box left">
-            <div class="content">Box 1</div>
-        </section>
-        <section class="box right">
-            <div class="content">Box 2</div>
-        </section>
-    </main>
 
-    <footer>
-        <nav class="bottom-menu">
-            <ul class="menu">
-                <li><a href="#">Inställningar</a></li>
-                <li><a href="#">Hjälp</a></li>
-            </ul>
-        </nav>W
-    </footer>
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+        <p>This is the home section.</p>
 
-    <!-- Slide-in right panel -->
-    <aside id="side-panel" class="side-panel" aria-hidden="true" role="dialog" aria-modal="true" tabindex="-1">
-        <button id="close-panel" class="close-btn" aria-label="Stäng meny">×</button>
-        <div class="panel-content">
-            <img src="Bil2.jpg" alt="Exempelbild">
-            <h2>Rubrik</h2>
-            <p>Här är lite text som följer med bilden i den högra menyn.</p>
-        </div>
-    </aside>
+    </section>
+
+
 </body>
+
 </html>

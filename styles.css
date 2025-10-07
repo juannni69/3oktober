@@ -1,54 +1,28 @@
-/* Basic reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:Segoe UI, Roboto, Arial, sans-serif;display:flex;flex-direction:column}
-
-header{position:sticky;top:0;background:#222;color:#fff}
-.top-menu{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
-.top-menu .menu{list-style:none;display:flex;gap:12px}
-.top-menu a{color:#fff;text-decoration:none;padding:6px 8px;border-radius:4px}
-.top-menu a:hover{background:rgba(255,255,255,0.08)}
-
-footer{position:sticky;bottom:0;background:#222;color:#fff;margin-top:auto}
-.bottom-menu{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;padding:10px 16px}
-.bottom-menu .menu{list-style:none;display:flex;gap:12px}
-.bottom-menu a{color:#fff;text-decoration:none;padding:6px 8px;border-radius:4px}
-.bottom-menu a:hover{background:rgba(255,255,255,0.08)}
-
-main{flex:1;display:flex;min-height:calc(100vh - 120px); /* reserve space for header+footer */}
-.box{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
-.box.left{background:linear-gradient(135deg,#6fb1fc,#4364f7)}
-.box.right{background:linear-gradient(135deg,#f7b267,#f08a4b)}
-.content{color:#fff;font-size:2rem;font-weight:600;padding:20px;text-align:center}
-
-/* On small screens stack the boxes vertically */
-@media (max-width:700px){
-	main{flex-direction:column;min-height:unset}
-	.content{font-size:1.6rem}
+.header {
+    display: flex;
+    justify-content: space-between; /* Gör att loggan är till vänster och länkarna till höger */
+    align-items: center; /* Ser till att bilden och länkarna ligger i samma höjd */
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* valfritt */
 }
 
-/* Utility: center page width */
-.logo{font-weight:700}
-.menu li{display:inline}
+.logo img {
+    height: 60px; /* justera efter behov */
+}
 
-/* Side panel (slide-in from right) */
-.side-panel{position:fixed;top:0;right:0;height:100vh;width:360px;max-width:92vw;background:#fff;box-shadow:-12px 0 32px rgba(0,0,0,0.28);transform:translateX(105%);transition:transform .36s cubic-bezier(.2,.9,.2,1);z-index:1000;padding:24px;overflow:auto}
-.side-panel.open{transform:translateX(0)}
-.side-panel .close-btn{position:absolute;top:12px;right:12px;border:none;background:#222;color:#fff;width:36px;height:36px;border-radius:6px;font-size:20px;line-height:1;cursor:pointer}
-.side-panel .close-btn:focus{outline:3px solid #99c2ff}
-.side-panel .panel-content{opacity:0;transform:translateX(8px);transition:opacity .28s ease,transform .28s ease}
-.side-panel.open .panel-content{opacity:1;transform:translateX(0)}
-.side-panel .panel-content img{width:100%;height:auto;border-radius:8px;margin-bottom:12px}
-.side-panel .panel-content h2{margin-bottom:8px}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-/* Button in header */
-#open-panel{background:#fff;border:0;color:#222;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
-#open-panel:focus{outline:3px solid #99c2ff}
-#open-panel:hover{background:rgba(255,255,255,0.06)}
+nav ul li {
+    margin-left: 20px; /* lite mellanrum mellan länkarna */
+}
 
-/* When panel open, optionally dim the page */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:900;opacity:0;pointer-events:none;transition:opacity .2s}
-.overlay.show{opacity:1;pointer-events:auto}
-
-/* Helper to prevent body scroll when panel is open */
-.no-scroll{overflow:hidden;height:100%}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
