@@ -1,28 +1,93 @@
-.header {
-    display: flex;
-    justify-content: space-between; /* Gör att loggan är till vänster och länkarna till höger */
-    align-items: center; /* Ser till att bilden och länkarna ligger i samma höjd */
-    padding: 10px 20px;
-    background-color: #f5f5f5; /* valfritt */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  --outline:1px dotted red;
+}
+body{
+  display:flex;
+  flex-direction:column;
+  height:100dvh;
+}
+header{
+  height: 100px;
+  background: linear-gradient(to right, #bbff00, #ff0000);
+  color:white;
+  font:bold 4rem sans-serif;
+  padding-left:2rem;
+}
+nav{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  height:3rem;
+  background:linear-gradient(to left, #a30000, #ffd500);
+  padding:0rem 1rem;
+  gap:.5rem;
+}
+a{
+  color:white;
+  font:bold 1.2rem sans-serif;
+  padding:0 .5rem;
+  text-decoration:none;
+  border-radius:5px;
+  transition:background .2s ease-in-out;
+}
+a:hover{
+  background: #99fa;
+}
+.box{
+  flex-grow:5;
+}
+.headerphoto img{
+  width: 200px;;
+  height:100px;
+  object-fit:cover;
+  object-position:center;
 }
 
-.logo img {
-    height: 60px; /* justera efter behov */
+.ferrari{
+  width: 100%;
+  height: 100px;
+
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.main{
+  flex-grow:100;
+  overflow-y:scroll;
+}
+footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:3rem;
+  background: #000;
+  color:white;
+  font:.8rem sans-serif;
+}
+.banner{
+  display:flex;
+  gap:5px;
+  padding:0.2rem 1rem 1rem 1rem; /* small top padding to sit just under nav */
+}
+.nav-wrap{width:100%}
+.nav-wrap nav{background: #000;padding:0.5rem 1rem}
+.banner img{
+  height: 1000px;
+
+}
+.article_sections{
+  display:flex;
+  gap:.5rem;
+  
+}
+section{
+  width:40ch;
+}
+section:first-child{
+  flex-grow:5;
+}
+.vbar{
+     border-left:1px solid black;
 }
 
-nav ul li {
-    margin-left: 20px; /* lite mellanrum mellan länkarna */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
